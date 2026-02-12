@@ -1,0 +1,5 @@
+(library
+ (name camlboy_lib)
+ (public_name camlboy.lib)
+ (libraries containers)
+ (preprocess (pps js_of_ocaml-ppx)))
