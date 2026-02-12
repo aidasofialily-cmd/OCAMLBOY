@@ -45,3 +45,13 @@ let () =
   
   (* If we are handing control to the C++ bridge: *)
   Printf.printf "🔌 Handing execution to C++ Bridge...\n"
+
+  open Js_of_ocaml
+
+let tick () =
+  (* Your emulator logic here *)
+  print_endline "OCaml Tick Executed"
+
+(* Register the function for the C++ bridge *)
+let () =
+  Callback.register "camlboy_tick" tick
