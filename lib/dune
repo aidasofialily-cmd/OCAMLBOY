@@ -3,3 +3,11 @@
  (public_name camlboy.lib)
  (libraries containers)
  (preprocess (pps js_of_ocaml-ppx)))
+
+(executable
+ (name main)
+ (foreign_stubs
+  (language cxx)
+  (names Emulator)
+  (flags -std=c++11))
+ (libraries camlboy_lib))
